@@ -1,0 +1,29 @@
+{
+  "name": "bcrypt-compare",
+  "version": "1.0.0",
+  "description": "comparison of bcrypt modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelsonic/bcrypt.git"
+  },
+  "keywords": [
+    "bcrypt",
+    "password",
+    "hash",
+    "module",
+    "comparison"
+  ],
+  "author": "@nelsonic <contact.nelsonic@gmail.com> (https://github.com/nelsonic)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonic/bcrypt/issues"
+  },
+  "homepage": "https://github.com/nelsonic/bcrypt",
+  "dependencies": {
+    "bcrypt": "^0.8.1"
+  }
+}
