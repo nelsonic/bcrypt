@@ -35,11 +35,13 @@ As with most things **npm** there are *several* to chose from.
 ![npm search bcrypt](http://i.imgur.com/LapIFMQ.png)
 npm
 
-We are going to compare the 4 most popular ones:
+We are going to ***compare*** the **4** ***most popular*** modules:
 
 + **bcrypt**: https://www.npmjs.com/package/bcrypt > https://github.com/ncb000gt/node.bcrypt.js/
-+ **bcryptjs**: https://github.com/dcodeIO/bcrypt.js
++ **bcryptjs**: https://www.npmjs.com/package/bcryptjs > https://github.com/dcodeIO/bcrypt.js
 + **bcrypt-nodejs**: https://www.npmjs.com/package/bcrypt-nodejs > https://github.com/shaneGirish/bcrypt-nodejs
++ **twin-bcrypt**: https://www.npmjs.com/package/twin-bcrypt > https://github.com/fpirsch/twin-bcrypt
+(twin-bcrypt has a *much* simpler hash and *compair* method)
 
 ## FAQ
 
@@ -49,3 +51,8 @@ that the under the hood its generating a ***dynamic salt***
 so it will never *appear* the same.
 But when you use the ***compareSync*** method, it will calculate
 the check using the salt in the original hash.
+
+## Reading
+
+- Explanation of the bcrypt format:
+http://stackoverflow.com/a/5882472/1148249

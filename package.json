@@ -4,7 +4,7 @@
   "description": "comparison of bcrypt modules",
   "main": "index.js",
   "scripts": {
-    "test": "tape"
+    "test": "./node_modules/tape/bin/tape ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,10 @@
   "dependencies": {
     "bcrypt": "^0.8.1",
     "bcrypt-nodejs": "0.0.3",
-    "bcryptjs": "^2.1.0"
+    "bcryptjs": "^2.1.0",
+    "twin-bcrypt": "^2.1.0"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
   }
 }
