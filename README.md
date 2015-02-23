@@ -52,7 +52,17 @@ so it will never *appear* the same.
 But when you use the ***compareSync*** method, it will calculate
 the check using the salt in the original hash.
 
-## Reading
+The modular crypt format for bcrypt consists of
 
-- Explanation of the bcrypt format:
-http://stackoverflow.com/a/5882472/1148249
++ $2$, $2a$ or $2y$ identifying the hashing algorithm and **format**,
++ a **two digit** value denoting the ***cost*** parameter, followed by $
++ a **53 characters** long base-64-encoded value (they use the alphabet
+., /, 0–9, A–Z, a–z that is different to the standard
+Base 64 Encoding alphabet) consisting of:
+  + **22 characters** of ***salt*** (effectively only 128 bits of the 132 decoded bits)
+  + **31 characters** of **encrypted** output (effectively only 184 bits of the 186 decoded bits)
+
+Thus the total length is 59 or 60 bytes respectively.
+
+
+> See: Explanation of the bcrypt format: http://stackoverflow.com/a/5882472/1148249

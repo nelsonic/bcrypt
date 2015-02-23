@@ -38,12 +38,13 @@ test("bcrypt-nodejs is compatible with bcrypt", function(t){
 // https://www.npmjs.com/package/twin-bcrypt
 test("twin-bcrypt is compatible with bcrypt", function(t){
   var salt = bcrypttw.genSalt(12);
-  console.log("SALT >> "+salt);
-  bcrypttw.hash("hello", salt, function(hash) {
-    console.log(hash);
-    t.false(bcrypt.compareSync("hello", hash), "twin-bcrypt NOT compatible");
-    t.end();
-  });
+  var hash = bcrypttw.hashSync('hello', salt);
+  // console.log("SALT >> "+salt);
+  // bcrypttw.hash("hello", salt, function(hash) {
+  // console.log(hash);
+  t.false(bcrypt.compareSync("hello", hash), "twin-bcrypt NOT compatible");
+  t.end();
+  // });
   // });
 
 });
